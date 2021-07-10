@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    .imgFound{
+        display: block;
+        width: 10%;
+        height: 50px;
+    }
+    #showImage{
+        width: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+</style>
+<body>
+    <button id="btnGetImg" class="btn btn-sm btn-primary">Get Images</button>
+    <div id="showImage">
+        
+    </div>
+    <button id="btnDownloadImages" class="btn btn-sm btn-danger">Download All Images</button>
+    <hr>
+    <input id="inputUrl" type="text" class="form-control" placeholder="put url for downloading...">
+    <button id="btnDownload" class="btn btn-sm btn-danger">Download</button>
+    
+    <script src="jquery.js"></script>  
+    <script src="jszip-master/dist/jszip.js"></script>  
+    <script src="jszip-master/vendor/FileSaver.js"></script>
+    <script src="jszip-utils-master/dist/jszip-utils.js"></script>  
+    <script src="popup.js"></script>  
+    <script src="content.js"></script>
+    <script src="background.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+    "name": "Download Images",
+    "description": "",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_title": "Download Images",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+    "permissions": [
+        "<all_urls>",
+        "tabs",
+        "activeTab",
+        "declarativeContent",
+        "contextMenus",
+        "notifications",
+        "storage",
+        "downloads"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["jquery.js", "content.js"],
+            "css": ["content.css"]
+        }
+    ]
+}
